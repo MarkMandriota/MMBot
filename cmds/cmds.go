@@ -5,12 +5,13 @@ import dg "github.com/bwmarrin/discordgo"
 type Command interface {
 	Name() string
 	Info(a ...string) string
-	Perm() []int
-	Exec(s *dg.Session, m *dg.MessageCreate)
+	Exec(*dg.Session, *dg.MessageCreate) error
 }
 
-func NewCommands(s *dg.Session) map[string]Command {
-	return map[string]Command{
-		"ping": &Ping{s},
+var Commands map[string]Command
+
+func init() {
+	Commands = map[string]Command{
+		"ping": &Ping{},
 	}
 }

@@ -1,0 +1,11 @@
+Bot:
+	API: https://github.com/bwmarrin/discordgo
+	
+	Boot:
+		Data init
+		Load configuration data
+	
+	Kernel:
+		Event handlers {Logger, Handler}
+			
+		Error handler

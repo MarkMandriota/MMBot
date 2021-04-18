@@ -1,4 +1,4 @@
-module mod
+module github.com/MarkMandriota/MMBot
 
 go 1.16
 
